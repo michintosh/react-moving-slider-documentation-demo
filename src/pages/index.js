@@ -4,15 +4,17 @@ import Navbar from "../components/Navbar"
 import Entry from "../components/Entry"
 import Intro from "../components/Intro"
 
-
-
 export default function Home() {
   return (
     <div>
       <Navbar />
       <Intro
         miniWindows={40}
-        images={["wdch.jpeg", "algo-rave.jpeg", "deep-dream2.jpeg"]}
+        images={[
+          "https://picsum.photos/800/500?random=1",
+          "https://picsum.photos/800/500?random=2",
+          "https://picsum.photos/800/500?random=3",
+        ]}
         titles={[
           "Do electric sheeps exists?",
           "Play it code",
@@ -31,7 +33,6 @@ export default function Home() {
           subtitle="Another coding sessione"
           date="12—24.02.2021, Madison Square"
         />
-        
       </div>
     </div>
   )

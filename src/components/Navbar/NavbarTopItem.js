@@ -38,13 +38,7 @@ function NavbarTopItem({ title }) {
           consectetur et est culpa et culpa duis.
         </p>
         <div>
-          <iframe
-            src="https://player.vimeo.com/video/498078764?autoplay=1&loop=1&autopause=0$muted=1"
-            width="640"
-            height="360"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+         
         </div>
       </div>
     </div>

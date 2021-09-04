@@ -6,6 +6,12 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: `/ua`,
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`autoprefixer`)({})],
+      },
+    },
+  ],
 }

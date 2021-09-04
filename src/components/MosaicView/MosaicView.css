@@ -11,9 +11,10 @@
 }
 
 .mosaicview {
-    width: 3%;
+    width: 10px;
     height: 300px;
     background-color: pink;
+    margin: 0 1px;
     background-attachment: fixed;
     
     background-position: center;
@@ -22,22 +23,23 @@
     animation: mover 3s infinite   cubic-bezier(0.41, 0.01, 0.69, 0.99) alternate;
     transition: 1s all ease;
     
-}
-.mosaicview.__close {
-    height: 0 !important;
-}
-.mosaicview:hover {
-    height: 80% !important;
-}
-.mosaicview.__close:hover {
-    height: 0 !important;
+
+    &.__close {
+        height: 0 !important;
+    }
+    &:hover {
+        height: 80% !important;
+    }
+    &.__close:hover {
+        height: 0 !important;
+    }
 }
 
 @-webkit-keyframes mover {
-    0% { transform: translateY(20px) ; opacity: 1; }
-    100% { transform: translateY(-20px) ;opacity: .1;  }
+    0% { transform: translateY(20px) ; }
+    100% { transform: translateY(-20px) ;  }
 }
 @keyframes mover {
-    0% { transform: translateY(20px) ; opacity: 1; }
-    100% { transform: translateY(-20px) ; opacity: .1; }
+    0% { transform: translateY(20px) ;  }
+    100% { transform: translateY(-20px) ;  }
 }
