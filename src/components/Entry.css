@@ -1,0 +1,41 @@
+.EntryContainer {
+    border-top: 1px solid;
+    display: flex;
+}
+.EntryContainer h1{
+    font-size: 5rem;
+}
+.left-part {
+    flex: 1;
+    position:sticky;
+    top:0;
+}
+.right-part {
+    flex: 2;
+    padding: 0 5px;
+}
+
+
+.metadata-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+   
+    position: sticky;
+    top: 50%;
+    background: #ffffff69;
+    z-index: 99;
+}
+.metadata-item {
+    flex: 1;
+    border-bottom: 1px solid;
+    margin: 0 5px;
+}
+.title-container {
+    flex: 1;
+    border-bottom: 1px solid;
+    margin: 0 5px;
+}
+.metadata-item:first-child {
+    margin-right: 5px;
+}

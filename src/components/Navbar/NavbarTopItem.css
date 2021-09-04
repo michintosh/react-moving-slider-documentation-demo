@@ -1,0 +1,65 @@
+.NavbarTopItem {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    flex: 1;
+    margin: 0 5px;
+    position: relative;
+}
+.NavbarTopItem h4 {
+    font-weight: 100;
+    margin: 0;
+    margin-top: 2px;
+}
+.NavbarTopItem-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.NavbarTopItem-header>div {
+    flex: 1;
+
+}
+.opener {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+}
+.opener>span {
+    position:absolute;
+    line-height: 0;
+    top:50%;
+    left:50%;
+    transform:translateY(-50%) translateX(-50%);
+}
+.opener:hover {
+    cursor: pointer;
+}
+.NavbarTopItem-innercontent {
+    background: #000000b9;
+    border-top: 1px solid;
+    border-bottom: 1px  solid;
+    color: white;
+    height: 80vh;
+    padding: 15px;
+    position: absolute;
+    z-index: 999;
+    margin-top: 5px;
+    top: 100%;
+    transform: translateY(-150%);
+    transition: .5s all ease;
+    overflow: auto;
+}
+.NavbarTopItem-innercontent iframe {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.NavbarTopItem-innercontent.__open {
+    transform: translateY(0%);
+}
