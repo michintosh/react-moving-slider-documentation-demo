@@ -16,15 +16,15 @@ function Navbar() {
 
   return (
     <>
+      <div
+        className={`logo-container ${open ? "__open" : ""}`}
+        onMouseEnter={() => {
+          setOpen(true)
+        }}
+      >
+        <img src="https://pugnimalago.it/wp-content/uploads/logo-placeholder-png.png" />
+      </div>
       <div className="Navbar-Container">
-        <div
-          className={`logo-container ${open ? "__open" : ""}`}
-          onMouseEnter={() => {
-            setOpen(true)
-          }}
-        >
-          <img src="logo.png" />
-        </div>
         <NavbarTopItem title="temporanea" />
         <NavbarTopItem title="aquiesce" />
         <NavbarTopItem title="remoret ips" />
@@ -37,16 +37,22 @@ function Navbar() {
           <ul className={`left-menu ${open ? "__open" : ""}`}>
             <li className="menu-item">
               <span>Temporanea</span>
-               <span style={{textAlign: `right`}}><SquareButton size="small"/></span>
+              <span style={{ textAlign: `right` }}>
+                <SquareButton size="small" />
+              </span>
             </li>
 
-            <li className="menu-item"> 
+            <li className="menu-item">
               <span>Sit Quivi</span>
-               <span style={{textAlign: `right`}}><SquareButton size="small"/></span>
+              <span style={{ textAlign: `right` }}>
+                <SquareButton size="small" />
+              </span>
             </li>
             <li className="menu-item">
-            <span>Etnernamre</span>
-               <span style={{textAlign: `right`}}><SquareButton size="small"/></span>
+              <span>Etnernamre</span>
+              <span style={{ textAlign: `right` }}>
+                <SquareButton size="small" />
+              </span>
             </li>
           </ul>
         </div>

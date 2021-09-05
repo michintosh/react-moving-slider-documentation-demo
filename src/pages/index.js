@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React from "react"
 import "../components/main.css"
 import Navbar from "../components/Navbar"
 import Entry from "../components/Entry"
@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Intro
-        miniWindows={40}
+        miniWindows={80}
         images={[
           "https://picsum.photos/800/500?random=1",
           "https://picsum.photos/800/500?random=2",
