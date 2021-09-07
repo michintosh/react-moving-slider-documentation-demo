@@ -4,7 +4,36 @@ import NavbarTopItem from "./Navbar/NavbarTopItem"
 
 import "./Navbar.css"
 
-import SquareButton from "./Navbar/SquareButton"
+
+const data = [
+  {
+    title: "Installation",
+    content: `
+      <p>
+      Run <code>npm install xxxx-xxxxx</code><br/>
+      Then, in your component, import at the top with <code>import XXXXX from XXXXX</code>
+      </p>
+    `
+  },
+  {
+    title: "Basic Setup",
+    content: `
+      <p>
+      The most basic setup is:
+      <pre>
+        <  MosaicView
+            images={[
+              "https://picsum.photos/800/500?random=10",
+              "https://picsum.photos/800/500?random=11",
+              "https://picsum.photos/800/500?random=12",
+            ]}
+          />
+      </pre>
+      This will setup the viewer with a basic slider, given a parent with a known width and height
+      </p>
+    `
+  }
+]
 
 function Navbar() {
   /* 
@@ -16,46 +45,10 @@ function Navbar() {
 
   return (
     <>
-      <div
-        className={`logo-container ${open ? "__open" : ""}`}
-        onMouseEnter={() => {
-          setOpen(true)
-        }}
-      >
-        <img src="https://pugnimalago.it/wp-content/uploads/logo-placeholder-png.png" />
-      </div>
       <div className="Navbar-Container">
-        <NavbarTopItem title="temporanea" />
-        <NavbarTopItem title="aquiesce" />
-        <NavbarTopItem title="remoret ips" />
-        <div
-          onMouseLeave={() => {
-            setOpen(false)
-          }}
-          className={`verticalline ${open ? "__open" : ""}`}
-        >
-          <ul className={`left-menu ${open ? "__open" : ""}`}>
-            <li className="menu-item">
-              <span>Temporanea</span>
-              <span style={{ textAlign: `right` }}>
-                <SquareButton size="small" />
-              </span>
-            </li>
-
-            <li className="menu-item">
-              <span>Sit Quivi</span>
-              <span style={{ textAlign: `right` }}>
-                <SquareButton size="small" />
-              </span>
-            </li>
-            <li className="menu-item">
-              <span>Etnernamre</span>
-              <span style={{ textAlign: `right` }}>
-                <SquareButton size="small" />
-              </span>
-            </li>
-          </ul>
-        </div>
+        {data.map(el => {
+            return <NavbarTopItem key={el.title} title={el.title} content={el.content} />
+        })}
       </div>
     </>
   )
